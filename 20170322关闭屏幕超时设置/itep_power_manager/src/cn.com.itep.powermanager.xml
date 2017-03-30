@@ -1,0 +1,74 @@
+<node name="/cn/com/itep/PowerManager">
+	<interface name="cn.com.itep.PowerManager.Display">
+		<method name="get_timeout">
+			<arg direction="out" type="i" name="timeout"/>
+		</method>
+		<method name="set_timeout">
+			<arg direction="in" type="i" name="timeout"/>
+		</method>
+		<method name="get_lock_session">
+			<arg direction="out" type="b" name="lock_session"/>
+		</method>
+		<method name="set_lock_session">
+			<arg direction="in" type="b" name="lock_session"/>
+		</method>
+	</interface>
+	<interface name="cn.com.itep.PowerManager.IdleShutdown">
+		<method name="get_timeout">
+			<arg direction="out" type="i" name="timeout"/>
+		</method>
+		<method name="set_timeout">
+			<arg direction="in" type="i" name="timeout"/>
+		</method>
+		<method name="get_inhibited_period">
+			<arg direction="out" type="b" name="enable"/>
+			<arg direction="out" type="s" name="begin"/>
+			<arg direction="out" type="s" name="end"/>
+		</method>
+		<method name="set_inhibited_period">
+			<arg direction="in" type="b" name="enable"/>
+			<arg direction="in" type="s" name="begin"/>
+			<arg direction="in" type="s" name="end"/>
+		</method>
+		<method name="get_connected_shutdown">
+			<arg direction="out" type="b" name="shutdown"/>
+		</method>
+		<method name="set_connected_shutdown">
+			<arg direction="in" type="b" name="shutdown"/>
+		</method>
+		<method name="get_wait">
+			<arg direction="out" type="i" name="length"/>
+		</method>
+		<method name="set_wait">
+			<arg direction="in" type="i" name="length"/>
+		</method>
+	</interface>
+	<interface name="cn.com.itep.PowerManager.TimedShutdown">
+		<method name="get_one_shot">
+			<arg direction="out" type="b" name="enable"/>
+			<arg direction="out" type="s" name="action"/>
+			<arg direction="out" type="s" name="time"/>
+		</method>
+		<method name="set_one_shot">
+			<arg direction="in" type="b" name="enable"/>
+			<arg direction="in" type="s" name="action"/>
+			<arg direction="in" type="s" name="time"/>
+		</method>
+		<method name="get_daily">
+			<arg direction="out" type="b" name="enable"/>
+			<arg direction="out" type="s" name="action"/>
+			<arg direction="out" type="s" name="time"/>
+		</method>
+		<method name="set_daily">
+			<arg direction="in" type="b" name="enable"/>
+			<arg direction="in" type="s" name="action"/>
+			<arg direction="in" type="s" name="time"/>
+		</method>
+		<method name="get_advance">
+			<arg direction="out" type="i" name="length"/>
+		</method>
+		<method name="set_advance">
+			<arg direction="in" type="i" name="length"/>
+		</method>
+	</interface>
+</node>

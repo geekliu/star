@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Power Manager
+Name[zh_CN]=电源管理器
+Exec=itep-power-manager
+Icon=preferences-system-power-manager
+Terminal=false
+Type=Application
+Categories=System;
